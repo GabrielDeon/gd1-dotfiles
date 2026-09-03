@@ -22,8 +22,8 @@ Contém as configurações do Hyprland, como:
 
 ```text
 hypridle.conf
-input.conf
-monitors.conf
+input.lua
+monitors.lua
 ```
 
 O diretório reproduz a estrutura esperada dentro de `~/.config`.
@@ -66,7 +66,7 @@ install-all.sh
 
 Ele executa os scripts unitários na ordem correta e, ao final, aplica as configurações do sistema.
 
-O script `configure-hypr.sh` remove configurações antigas, executa o Stow e recarrega o Hyprland.
+O script `configure-hypr.sh` valida os arquivos Lua, preserva eventuais conflitos em backups com timestamp, executa o Stow, recarrega o Hyprland e verifica erros de configuração.
 
 ## GNU Stow
 
@@ -75,8 +75,8 @@ O GNU Stow cria links simbólicos entre os arquivos deste repositório e o diret
 Por exemplo:
 
 ```text
-~/.config/hypr/input.conf
-→ ~/.dotfiles/hyprland/.config/hypr/input.conf
+~/.config/hypr/input.lua
+→ ~/.dotfiles/hyprland/.config/hypr/input.lua
 ```
 
 Dessa forma, os arquivos permanecem dentro do repositório e podem ser versionados pelo Git.
@@ -109,5 +109,4 @@ Execute o pipeline principal:
 ./scripts/pipeline/install-all.sh
 ```
 
-O pipeline instala as ferramentas necessárias, aplica as configurações com GNU Stow e recarrega o Hyprland.
-
+O pipeline instala as ferramentas necessárias, aplica as configurações com GNU Stow, recarrega o Hyprland e falha caso `hyprctl configerrors` reporte algum problema.

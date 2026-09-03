@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 set -euo pipefail
 
@@ -9,4 +9,3 @@ bash "$SCRIPTS_DIR/units/install-brave.sh"
 bash "$SCRIPTS_DIR/units/install-stow.sh"
 bash "$SCRIPTS_DIR/units/install-yazi.sh"
 bash "$SCRIPTS_DIR/pipeline/configure-hypr.sh"
-

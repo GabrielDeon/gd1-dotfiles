@@ -1,3 +1,5 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
-yay -S --noconfirm --needed stow
+set -euo pipefail
+
+omarchy pkg add stow
