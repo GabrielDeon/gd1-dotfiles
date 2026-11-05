@@ -44,6 +44,7 @@ Cada script é responsável pela instalação de uma única ferramenta, como:
 install-brave.sh
 install-stow.sh
 install-yazi.sh
+install-steam.sh
 ```
 
 Eles podem ser executados separadamente quando necessário.
