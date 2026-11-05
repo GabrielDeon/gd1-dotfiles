@@ -10,6 +10,7 @@ As configurações são versionadas no Git e aplicadas ao sistema com o **GNU St
 .dotfiles/
 ├── hyprland/
 ├── waybar/
+├── omarchy/plugins/gd1.system-market/
 └── scripts/
     ├── units/
     ├── optionals/
@@ -34,6 +35,12 @@ Contém as configurações e estilos da Waybar.
 
 Assim como o Hyprland, pode ser aplicado utilizando o GNU Stow.
 
+### `omarchy/plugins/gd1.system-market`
+
+Contém o plugin **System & Markets** do Omarchy shell (Quickshell), com utilização de RAM/CPU/GPU, temperaturas e cotações Bitcoin/USD e USD/BRL. O painel é integrado à barra nativa do Omarchy, independentemente dos temas legados da Waybar.
+
+Execute `bash scripts/units/install-system-market.sh` para instalar ou atualizar apenas o plugin. O pipeline completo também executa essa etapa após `configure-hypr.sh`. O instalador copia os arquivos em vez de usar Stow, pois o Omarchy rejeita links simbólicos dentro de plugins. Ele preserva as demais configurações e preferências, cria backups antes de substituir arquivos e funciona antes do login gráfico. Veja [a documentação do plugin](omarchy/plugins/gd1.system-market/README.md).
+
 ### `scripts/units`
 
 Contém scripts pequenos e independentes.
@@ -45,6 +52,7 @@ install-brave.sh
 install-stow.sh
 install-yazi.sh
 install-steam.sh
+install-system-market.sh
 ```
 
 Eles podem ser executados separadamente quando necessário.
@@ -111,3 +119,5 @@ Execute o pipeline principal:
 ```
 
 O pipeline instala as ferramentas necessárias, aplica as configurações com GNU Stow, recarrega o Hyprland e falha caso `hyprctl configerrors` reporte algum problema.
+
+O pipeline também instala e habilita o System & Markets na barra do Omarchy. Para validar o instalador isoladamente, sem alterar o desktop: `python3 -B -m unittest discover -s tests -v`.

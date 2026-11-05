@@ -1,0 +1,23 @@
+{
+  "title": "System & Markets",
+  "hardware": "Hardware",
+  "ram": "RAM utilization",
+  "cpu": "CPU utilization",
+  "cpuTemp": "CPU temperature",
+  "gpu": "GPU utilization",
+  "gpuTemp": "GPU temperature",
+  "markets": "Markets",
+  "btc": "Bitcoin · USD",
+  "usd": "US dollar · BRL",
+  "unavailable": "Unavailable",
+  "loading": "Loading…",
+  "paused": "Price updates paused",
+  "offline": "Update failed · showing last quotes",
+  "source": "AwesomeAPI · refresh every 5 minutes",
+  "pause": "Pause Prices",
+  "resume": "Resume Prices",
+  "updated": "Quote time: %1",
+  "stale": "Quote is over 15 minutes old",
+  "refresh": "Refresh Prices",
+  "refreshing": "Refreshing…"
+}

@@ -1,0 +1,23 @@
+{
+  "title": "Sistema e Cotações",
+  "hardware": "Hardware",
+  "ram": "Utilização da RAM",
+  "cpu": "Utilização da CPU",
+  "cpuTemp": "Temperatura da CPU",
+  "gpu": "Utilização da GPU",
+  "gpuTemp": "Temperatura da GPU",
+  "markets": "Cotações",
+  "btc": "Bitcoin · USD",
+  "usd": "Dólar americano · BRL",
+  "unavailable": "Indisponível",
+  "loading": "Carregando…",
+  "paused": "Atualizações de preços pausadas",
+  "offline": "Falha na atualização · últimas cotações",
+  "source": "AwesomeAPI · atualização a cada 5 minutos",
+  "pause": "Pausar preços",
+  "resume": "Retomar preços",
+  "updated": "Horário da cotação: %1",
+  "stale": "Cotação com mais de 15 minutos",
+  "refresh": "Atualizar cotações",
+  "refreshing": "Atualizando…"
+}

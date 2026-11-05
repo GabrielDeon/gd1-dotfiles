@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "gd1.system-market",
+  "name": "System & Markets",
+  "version": "1.0.0",
+  "author": "gd1",
+  "description": "Live hardware readings and BTC/USD, USD/BRL quotes",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "Dashboard.qml"
+  },
+  "barWidget": {
+    "displayName": "System & Markets",
+    "description": "Hardware and currency dashboard",
+    "category": "System",
+    "allowMultiple": false
+  }
+}
